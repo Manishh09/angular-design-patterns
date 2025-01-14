@@ -1,0 +1,13 @@
+<h1 class="header-text">Adapter Design Pattern Demo</h1>
+
+<div class="product-container">
+    @if (data$ | async; as products) {
+        <ul>
+            @for (product of products; track product.id) {
+                <li>
+                     {{product.name}} - {{product.price}}
+                </li>
+            }
+        </ul>
+    }
+</div>
